@@ -1,0 +1,6 @@
+[submodule "wgpu-native"]
+	path = wgpu-native
+	url = https://github.com/gfx-rs/wgpu-native
+    shallow = true
+    recursive = true
+    depth = 1
