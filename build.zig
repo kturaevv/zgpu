@@ -8,7 +8,7 @@ pub fn build(b: *std.Build) void {
     build_wgpu_native_from_source.setCwd(b.path("wgpu-native"));
 
     const exe = b.addExecutable(.{
-        .name = "zvox",
+        .name = "zgpu",
         .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,

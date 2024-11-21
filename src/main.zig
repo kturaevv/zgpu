@@ -5,15 +5,13 @@ const c = @cImport({
 });
 
 pub fn main() !void {
-    std.debug.print("Testing WGPU initialization...\n", .{});
+    std.log.info("Testing WGPU initialization...", .{});
 
-    // Create instance
     const instance = c.wgpuCreateInstance(null);
     if (instance == null) {
-        std.debug.print("Failed to create WGPU instance\n", .{});
+        std.log.err("Failed to create WGPU instance", .{});
         return error.WGPUInitFailed;
     }
     defer c.wgpuInstanceRelease(instance);
-
-    std.debug.print("WGPU instance created successfully\n", .{});
+    std.log.info("WGPU instance created successfully", .{});
 }
